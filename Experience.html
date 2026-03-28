@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chinna | Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root { --orange:#ff6b1a; --bg:#0d0d0d; --card:#161616; --text:#f0f0f0; --muted:#888; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; }
+
+  nav {
+    position:fixed; top:0; width:100%; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:18px 60px;
+    background:rgba(13,13,13,0.95); backdrop-filter:blur(12px);
+    border-bottom:1px solid #222;
+  }
+  .logo { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800; color:var(--orange); text-decoration:none; }
+  .nav-links { display:flex; gap:36px; list-style:none; }
+  .nav-links a { color:var(--text); text-decoration:none; font-size:0.95rem; font-weight:500; transition:color 0.2s; position:relative; }
+  .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--orange); transition:width 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--orange); }
+  .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+  .btn-resume { background:var(--orange); color:#fff; border:none; padding:10px 22px; border-radius:30px; font-size:0.9rem; font-weight:600; cursor:pointer; }
+
+  .page-hero {
+    padding:140px 60px 60px;
+    background:radial-gradient(ellipse at 80% 30%, #2a1000 0%, #0d0d0d 60%);
+  }
+  .sec-label { color:var(--orange); font-size:0.85rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+  .sec-title { font-family:'Syne',sans-serif; font-size:3rem; font-weight:800; }
+  .sec-sub { color:var(--muted); margin-top:14px; font-size:1rem; }
+
+  .exp-section { padding:60px; }
+
+  /* Timeline */
+  .timeline { position:relative; padding-left:40px; }
+  .timeline::before {
+    content:''; position:absolute; left:10px; top:0; bottom:0;
+    width:2px; background:linear-gradient(to bottom, var(--orange), #333);
+  }
+  .timeline-item { position:relative; margin-bottom:50px; }
+  .timeline-dot {
+    position:absolute; left:-36px; top:6px;
+    width:16px; height:16px; border-radius:50%;
+    background:var(--orange); border:3px solid var(--bg);
+    box-shadow:0 0 0 2px var(--orange);
+  }
+  .timeline-card {
+    background:var(--card); border:1px solid #222;
+    border-radius:16px; padding:30px 36px;
+    transition:border-color 0.3s;
+  }
+  .timeline-card:hover { border-color:var(--orange); }
+  .exp-role { font-family:'Syne',sans-serif; font-size:1.25rem; font-weight:800; }
+  .exp-company { color:var(--orange); font-size:0.95rem; font-weight:600; margin:6px 0; }
+  .exp-date {
+    display:inline-block; background:#1e1e1e;
+    color:var(--muted); font-size:0.8rem;
+    padding:4px 14px; border-radius:20px; margin-bottom:16px;
+  }
+  .exp-points { list-style:none; }
+  .exp-points li { color:#aaa; font-size:0.92rem; line-height:1.7; padding:4px 0; padding-left:16px; position:relative; }
+  .exp-points li::before { content:'→'; position:absolute; left:0; color:var(--orange); }
+
+  /* Education */
+  .edu-section { padding:0 60px 60px; }
+  .edu-title { font-family:'Syne',sans-serif; font-size:1.2rem; font-weight:700; color:var(--orange); border-left:3px solid var(--orange); padding-left:14px; margin-bottom:28px; }
+  .edu-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:20px; }
+  .edu-card {
+    background:var(--card); border:1px solid #222;
+    border-radius:14px; padding:24px 28px;
+    transition:border-color 0.3s;
+  }
+  .edu-card:hover { border-color:var(--orange); }
+  .edu-degree { font-weight:700; font-size:1rem; margin-bottom:6px; }
+  .edu-school { color:var(--muted); font-size:0.88rem; margin-bottom:10px; }
+  .edu-meta { display:flex; justify-content:space-between; font-size:0.82rem; }
+  .edu-year { color:var(--orange); font-weight:600; }
+  .edu-cgpa { color:#aaa; }
+
+  footer { text-align:center; padding:30px; color:var(--muted); font-size:0.85rem; border-top:1px solid #1e1e1e; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Chinna</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html" class="active">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="btn-resume">View Resume</button>
+</nav>
+
+<div class="page-hero">
+  <div class="sec-label">Work History</div>
+  <h1 class="sec-title">Experience</h1>
+  <p class="sec-sub">My professional journey across different roles and industries.</p>
+</div>
+
+<div class="exp-section">
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="exp-role">Assistant Team Leader</div>
+        <div class="exp-company">Cogent E Services</div>
+        <div class="exp-date">2022 – 2024</div>
+        <ul class="exp-points">
+          <li>Team coordination and daily reporting</li>
+          <li>Assisted in training and operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="exp-role">Supervisor</div>
+        <div class="exp-company">RBSSN Pvt. Ltd</div>
+        <div class="exp-date">2024 – 2025</div>
+        <ul class="exp-points">
+          <li>Supervised workforce and daily tasks</li>
+          <li>Maintained basic work records</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="exp-role">Supervisor</div>
+        <div class="exp-company">MSR Minerals & Projects</div>
+        <div class="exp-date">2025 – Present</div>
+        <ul class="exp-points">
+          <li>Supervising site operations and workers</li>
+          <li>Monitoring daily work progress</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="edu-section">
+  <div class="edu-title">Education</div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-degree">B.Sc (GPC)</div>
+      <div class="edu-school">D.N.R College, Bhimavaram</div>
+      <div class="edu-meta">
+        <span class="edu-year">2019 – 2022</span>
+        <span class="edu-cgpa">CGPA: 7.51</span>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">Intermediate (Bi.P.C)</div>
+      <div class="edu-school">A.P.S.W.R, Junadu Bunglow</div>
+      <div class="edu-meta">
+        <span class="edu-year">2018 – 2019</span>
+        <span class="edu-cgpa">CGPA: 6.97</span>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">SSC</div>
+      <div class="edu-school">ZPH School, R.S Rangapuram</div>
+      <div class="edu-meta">
+        <span class="edu-year">2016 – 2017</span>
+        <span class="edu-cgpa">CGPA: 7.0</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Chinna | Web Developer — Built with ❤️</footer>
+</body>
+</html>
