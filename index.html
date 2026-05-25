@@ -8,6 +8,29 @@
 </head>
 <body>
 
+<noscript>
+    <style>
+        .splash-container { display: none !important; }
+        .main-content { opacity: 1 !important; }
+    </style>
+</noscript>
+
+<!-- SPLASH SCREEN -->
+<div id="splash" class="splash-container">
+    <div class="splash-logo">
+        <span class="splash-emoji">💻</span>
+    </div>
+    <div class="splash-brand">Chinna</div>
+    <div class="splash-caption">Web Developer &amp; UI Designer</div>
+    <div class="splash-loader">
+        <div class="splash-loader-bar"></div>
+    </div>
+    <div class="splash-footer">Crafting modern web experiences</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main-content" class="main-content">
+
 <header>
 
     <nav>
@@ -77,6 +100,27 @@
     </div>
 
 </header>
+
+</div>
+
+<script>
+    // Splash → Main transition
+    window.addEventListener('load', () => {
+        const splash = document.getElementById('splash');
+        const mainContent = document.getElementById('main-content');
+        
+        // After the loading bar animation finishes (~2.5s), fade out splash
+        setTimeout(() => {
+            splash.classList.add('splash-fade-out');
+            mainContent.classList.add('main-visible');
+            
+            // Remove splash from DOM after transition
+            setTimeout(() => {
+                splash.style.display = 'none';
+            }, 600);
+        }, 2800);
+    });
+</script>
 
 </body>
 </html>
